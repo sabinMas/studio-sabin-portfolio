@@ -4,55 +4,58 @@ import './AboutSection.css';
 
 const skills = [
   { category: 'Frontend', items: ['React / Next.js', 'TypeScript', 'Vite', 'CSS'] },
-  { category: 'Backend', items: ['Node.js / Express', 'Python', 'SQLite', 'REST APIs'] },
-  { category: 'Geospatial & AI', items: ['CesiumJS', 'MapLibre GL', 'Ollama / LLMs', 'Gemini / Cerebras'] },
-  { category: 'Tooling', items: ['Git / GitHub', 'Vercel', 'C++ / GBA (Butano)', 'PHP → Node migrations'] },
+  { category: 'Backend', items: ['Node.js / Express', 'Python', 'SQLite / MySQL', 'REST APIs'] },
+  { category: 'Geospatial & AI', items: ['CesiumJS', 'MapLibre GL', 'ESRI ArcGIS', 'Ollama / LLMs'] },
+  { category: 'Tooling', items: ['Git / GitHub', 'Vercel', 'C++ / Butano (GBA)', 'PHP'] },
 ];
 
 export default function AboutSection() {
   return (
     <section className="about-section" id="about">
       <div className="about-container">
+
         <div className="about-header reveal">
-          <h2 className="section-title">About Me</h2>
-          <p className="section-description">
-            The person behind the pixels.
-          </p>
+          <h2 className="about-title">About</h2>
         </div>
 
         <div className="about-body">
           <div className="about-text reveal">
             <p>
-              I&apos;m Mason Sabin, a full-stack developer based in <strong>Kent, WA</strong> currently
-              interning as a Full-Stack Web Developer at <strong>Green River College</strong> and
-              training multimodal LLMs at <strong>Handshake AI</strong>. I&apos;m pursuing a
-              Bachelor of Applied Science in IT Software Development (expected June 2027),
-              having already earned my AAS in Data Analytics &amp; Software Development with a
-              3.59 GPA.
+              I&apos;m a full-stack developer and software engineering student at{' '}
+              <strong>Green River College</strong> based in Kent, WA. I hold an AAS in
+              Data Analytics &amp; Software Development and am pursuing a Bachelor of Applied
+              Science — building toward a career at the intersection of geospatial
+              intelligence, applied AI, and thoughtful engineering.
             </p>
             <p>
-              My work lives at the intersection of <strong>data and story</strong> — whether that&apos;s
-              aggregating 80+ government APIs into a geospatial intelligence platform, building an AI
-              that trades like Warren Buffett, or co-shipping a Game Boy Advance game with 25+ developers.
-              Before tech, I spent two years as a volunteer representative in <strong>Rome, Italy</strong>,
-              leading a media team, teaching English to 60+ students, and providing multilingual
-              interpretation for refugees.
+              I&apos;m currently building <strong>GeoSight</strong> — a full-stack platform
+              that aggregates 80+ government and open-data APIs into real-time geospatial
+              analytics for any place on earth. Alongside that, I intern as a full-stack
+              web developer at Green River College, collaborating cross-functionally with
+              administration and a team of 7 to deliver technical solutions.
             </p>
             <p>
-              Outside of code I&apos;m drawn to surrealist art — particularly Dalí&apos;s ability to
-              make the impossible feel inevitable. That sensibility shows up in my UI work:
+              Before code, I spent two years as a <strong>Zone Leader in Rome, Italy</strong>,
+              overseeing 14+ team members, teaching English to 60+ students, and providing
+              multilingual interpretation for refugees. I&apos;ve since led multi-million dollar
+              construction projects. I bring that same clarity of communication and
+              leadership into every technical collaboration.
+            </p>
+            <p>
+              Outside of work I&apos;m drawn to surrealist art — particularly Dalí&apos;s ability
+              to make the impossible feel inevitable. That sensibility shows up in my UI work:
               precise, a little unexpected, and always intentional.
             </p>
 
             <div className="about-links">
               <a href="https://github.com/sabinMas" target="_blank" rel="noopener noreferrer" className="about-link">
-                GitHub
+                GitHub ↗
               </a>
               <a href="https://linkedin.com/in/mason-sabin" target="_blank" rel="noopener noreferrer" className="about-link">
-                LinkedIn
+                LinkedIn ↗
               </a>
               <a href="mailto:masonsabin@gmail.com" className="about-link">
-                Email
+                Email ↗
               </a>
               <a href="/resume.pdf" download className="about-link primary">
                 Download Resume
@@ -66,16 +69,14 @@ export default function AboutSection() {
                 <h4 className="skill-category">{category}</h4>
                 <ul className="skill-list">
                   {items.map((item) => (
-                    <li key={item} className="skill-item">
-                      <span className="skill-dot" aria-hidden>◆</span>
-                      {item}
-                    </li>
+                    <li key={item} className="skill-item">{item}</li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );

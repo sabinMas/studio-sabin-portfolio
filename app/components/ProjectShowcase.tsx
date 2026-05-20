@@ -154,11 +154,8 @@ export default function ProjectShowcase() {
     <section className="projects-section" id="projects">
       <div className="projects-container">
         <div className="section-header reveal">
-          <h2 className="section-title">Featured Projects</h2>
-          <p className="section-description">
-            A selection of my most substantial work spanning full-stack development,
-            geospatial analysis, AI trading systems, and environmental storytelling.
-          </p>
+          <h2 className="section-title">Featured Works</h2>
+          <span className="section-count">[009]</span>
         </div>
 
         <div className="projects-grid">

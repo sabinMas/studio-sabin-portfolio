@@ -19,9 +19,7 @@ export default function Navigation() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <a href="#home" className="nav-brand" onClick={close}>
-          <span className="brand-text">StudioSabin</span>
-          <span className="brand-dot">·</span>
-          <span className="brand-sub">Portfolio</span>
+          MASON SABIN
         </a>
 
         <button
@@ -32,16 +30,16 @@ export default function Navigation() {
         >
           <span />
           <span />
-          <span />
         </button>
 
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`} role="list">
-          <li><a href="#home"     onClick={close}>Home</a></li>
+          <li><a href="#home"     onClick={close}>Index</a></li>
           <li><a href="#projects" onClick={close}>Projects</a></li>
           <li><a href="#about"    onClick={close}>About</a></li>
+          <li><a href="/resume.pdf" download onClick={close}>Resume</a></li>
           <li>
-            <a href="/resume.pdf" download className="nav-resume" onClick={close}>
-              Resume
+            <a href="mailto:masonsabin@gmail.com" className="nav-cta" onClick={close}>
+              Let&apos;s Talk
             </a>
           </li>
         </ul>
