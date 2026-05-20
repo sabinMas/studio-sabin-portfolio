@@ -104,6 +104,49 @@ const projects: Project[] = [
       { label: 'Data Points', value: '1000+' },
     ],
   },
+  {
+    id: '7',
+    title: 'PDGA Tournament Director Marketplace',
+    description:
+      'Full-featured e-commerce storefront for disc golf tournament directors to order event supplies. Features email token authentication, an interactive Leaflet.js map-based store locator via Overpass/Nominatim APIs, and a dynamic cart with tiered product recommendations.',
+    tags: ['JavaScript', 'PHP', 'Leaflet.js', 'REST APIs'],
+    githubLink: 'https://github.com/sabinMas/pdga-TD-marketplace',
+    emoji: '🥏',
+    stats: [
+      { label: 'Commits', value: '259' },
+      { label: 'Contributors', value: '4' },
+      { label: 'API Integrations', value: '3' },
+    ],
+  },
+  {
+    id: '8',
+    title: 'CloudForge',
+    description:
+      'Full-stack cloud file and image hosting platform with user authentication, session management, and a MySQL-backed profile dashboard. Built with Express 5, multer for file uploads, and deployed on a VM with protected routes.',
+    tags: ['Node.js', 'Express', 'MySQL', 'EJS'],
+    githubLink: 'https://github.com/sabinMas/CloudForge',
+    emoji: '☁️',
+    stats: [
+      { label: 'Commits', value: '88' },
+      { label: 'Contributors', value: '3' },
+      { label: 'Auth System', value: 'Session' },
+    ],
+  },
+  {
+    id: '9',
+    title: 'PR-TRAINER',
+    description:
+      'Mobile-first sprint tracking app for athletes to log training sessions, compare personal records across event types, and analyze performance trends. Serverless Node.js backend with Vercel Postgres and username/password auth.',
+    tags: ['Node.js', 'Vercel', 'SQL', 'Vanilla JS'],
+    liveLink: 'https://pr-trainer.vercel.app',
+    githubLink: 'https://github.com/sabinMas/PR-TRAINER',
+    emoji: '🏃',
+    stats: [
+      { label: 'Commits', value: '17' },
+      { label: 'Database', value: 'Postgres' },
+      { label: 'Platform', value: 'Vercel' },
+    ],
+  },
 ];
 
 export default function ProjectShowcase() {
