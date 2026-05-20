@@ -29,9 +29,19 @@ export default function ParticleTracer() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    const drawBg = () => {
+      const g = ctx.createLinearGradient(0, canvas.height * 0.55, canvas.width, canvas.height);
+      g.addColorStop(0, '#0a0a0a');
+      g.addColorStop(0.55, '#1a1a2e');
+      g.addColorStop(1, '#16213e');
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    };
+
     const resize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      drawBg();
     };
     resize();
     window.addEventListener('resize', resize);
@@ -110,7 +120,7 @@ export default function ParticleTracer() {
         top: 0,
         left: 0,
         pointerEvents: 'none',
-        zIndex: 10,
+        zIndex: 0,
       }}
     />
   );
