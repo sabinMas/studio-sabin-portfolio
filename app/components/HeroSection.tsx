@@ -13,11 +13,11 @@ export default function HeroSection() {
           className="hero-bg-img"
           draggable={false}
         />
-        {/* "Studio Sabin" rendered on the iMac screen */}
-        <div className="screen-label">
+        {/* "Studio Sabin" rendered on the iMac screen — links to projects */}
+        <a href="#projects" className="screen-label" aria-label="View projects">
           <span className="screen-line">Studio</span>
           <span className="screen-line screen-line--name">Sabin</span>
-        </div>
+        </a>
       </div>
 
       {/* Bottom gradient for text readability */}

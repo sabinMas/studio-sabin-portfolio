@@ -42,8 +42,23 @@
   flex-direction: column;
   align-items: center;
   gap: 0;
-  pointer-events: none;
+  pointer-events: auto;
+  cursor: pointer;
   z-index: 2;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+
+.screen-label:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.screen-label:hover .screen-line {
+  text-shadow:
+    0 0 12px rgba(180, 235, 255, 1),
+    0 0 30px rgba(120, 200, 255, 0.95),
+    0 0 60px rgba(80, 160, 255, 0.7),
+    0 0 100px rgba(60, 120, 240, 0.45);
 }
 
 .screen-line {
