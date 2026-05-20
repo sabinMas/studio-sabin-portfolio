@@ -3,10 +3,10 @@
 import './AboutSection.css';
 
 const skills = [
-  { category: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'CSS / Tailwind'] },
-  { category: 'Backend', items: ['Node.js', 'Python', 'SQLite', 'REST APIs'] },
-  { category: 'Geospatial & Data', items: ['CesiumJS', 'Mapbox', 'D3.js', 'GeoJSON'] },
-  { category: 'Tooling & Other', items: ['Git', 'Vercel', 'Ollama / LLMs', 'C++ / GBA'] },
+  { category: 'Frontend', items: ['React / Next.js', 'TypeScript', 'Vite', 'CSS'] },
+  { category: 'Backend', items: ['Node.js / Express', 'Python', 'SQLite', 'REST APIs'] },
+  { category: 'Geospatial & AI', items: ['CesiumJS', 'MapLibre GL', 'Ollama / LLMs', 'Gemini / Cerebras'] },
+  { category: 'Tooling', items: ['Git / GitHub', 'Vercel', 'C++ / GBA (Butano)', 'PHP → Node migrations'] },
 ];
 
 export default function AboutSection() {
@@ -23,21 +23,25 @@ export default function AboutSection() {
         <div className="about-body">
           <div className="about-text reveal">
             <p>
-              I&apos;m Mason Sabin, a full-stack developer based in the Pacific Northwest.
-              I studied at <strong>Green River College</strong> where I built games for the Game Boy
-              Advance with a cohort of 25+ developers, which taught me as much about
-              collaboration as it did about low-level programming.
+              I&apos;m Mason Sabin, a full-stack developer based in <strong>Kent, WA</strong> currently
+              interning as a Full-Stack Web Developer at <strong>Green River College</strong> and
+              training multimodal LLMs at <strong>Handshake AI</strong>. I&apos;m pursuing a
+              Bachelor of Applied Science in IT Software Development (expected June 2027),
+              having already earned my AAS in Data Analytics &amp; Software Development with a
+              3.59 GPA.
             </p>
             <p>
               My work lives at the intersection of <strong>data and story</strong> — whether that&apos;s
-              mapping salmon watersheds, building an AI that trades like Warren Buffett, or
-              designing a marketplace for developer tools. I&apos;m drawn to problems where the
-              visual layer matters as much as the logic underneath it.
+              aggregating 80+ government APIs into a geospatial intelligence platform, building an AI
+              that trades like Warren Buffett, or co-shipping a Game Boy Advance game with 25+ developers.
+              Before tech, I spent two years as a volunteer representative in <strong>Rome, Italy</strong>,
+              leading a media team, teaching English to 60+ students, and providing multilingual
+              interpretation for refugees.
             </p>
             <p>
-              Outside of code I&apos;m inspired by surrealist art — particularly Salvador Dalí&apos;s
-              ability to make the impossible feel inevitable. That sensibility shows up in
-              how I approach UI: precise, a little unexpected, and always intentional.
+              Outside of code I&apos;m drawn to surrealist art — particularly Dalí&apos;s ability to
+              make the impossible feel inevitable. That sensibility shows up in my UI work:
+              precise, a little unexpected, and always intentional.
             </p>
 
             <div className="about-links">
