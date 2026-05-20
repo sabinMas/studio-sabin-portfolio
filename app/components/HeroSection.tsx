@@ -5,29 +5,12 @@ import './HeroSection.css';
 export default function HeroSection() {
   return (
     <section className="hero" id="home">
-      {/* Full-bleed Dalí background */}
-      <div className="hero-image-wrap" aria-hidden>
-        <img
-          src="/hero-bg.jpg"
-          alt=""
-          className="hero-bg-img"
-          draggable={false}
-        />
-        {/* "Studio Sabin" rendered on the iMac screen — links to projects */}
-        <a href="#projects" className="screen-label" aria-label="View projects">
-          <span className="screen-line">Studio</span>
-          <span className="screen-line screen-line--name">Sabin</span>
-        </a>
-      </div>
-
-      {/* Bottom gradient for text readability */}
-      <div className="hero-overlay" aria-hidden />
-
       <div className="hero-content">
         <p className="hero-eyebrow">Full-Stack Developer &amp; Creative Technologist</p>
 
         <h1 className="hero-title">
-          <span className="title-name">Mason Sabin</span>
+          <span className="title-studio">Studio</span>
+          <span className="title-name">Sabin</span>
         </h1>
 
         <p className="hero-description">
