@@ -19,7 +19,7 @@ const projects: Project[] = [
     id: '1',
     title: 'GeoSight',
     description:
-      'Geospatial intelligence platform aggregating 80+ government and open-data APIs into real-time mission briefings across 9 lenses. Dual LLM pipelines (Cerebras + Gemini) power instant analysis and natural language report generation.',
+      'Geospatial intelligence platform aggregating 80+ government and open-data APIs into real-time mission briefings across 9 lenses. Dual LLM pipelines (Cerebras + Gemini) power instant analysis and natural language report generation. Accepted into Handshake AI Learn Hub as a Codex Creator Challenge finalist.',
     tags: ['Next.js', 'TypeScript', 'CesiumJS', 'MapLibre GL', 'LLM'],
     liveLink: 'https://geosight.earth',
     githubLink: 'https://github.com/sabinMas/geosight-gspat',
