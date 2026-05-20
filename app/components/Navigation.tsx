@@ -19,7 +19,7 @@ export default function Navigation() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <a href="#home" className="nav-brand" onClick={close}>
-          MASON SABIN
+          STUDIO SABIN
         </a>
 
         <button
