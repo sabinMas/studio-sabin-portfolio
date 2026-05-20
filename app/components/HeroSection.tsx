@@ -1,10 +1,12 @@
 'use client';
 
 import { useCommitCount } from '@/hooks/useCommitCount';
+import { useAPIStats } from '@/hooks/useAPIStats';
 import './HeroSection.css';
 
 export default function HeroSection() {
-  const { count: commitCount, loading } = useCommitCount();
+  const { count: commitCount, loading: commitLoading } = useCommitCount();
+  const { totalAPIs, loading: apiLoading } = useAPIStats();
 
   return (
     <section className="hero" id="home">
@@ -30,13 +32,15 @@ export default function HeroSection() {
             <span className="stat-label">Projects</span>
           </div>
           <div className="stat">
-            <span className="stat-number" style={{ opacity: loading ? 0.5 : 1 }}>
-              {loading ? '···' : commitCount ? `${commitCount}+` : '400+'}
+            <span className="stat-number" style={{ opacity: commitLoading ? 0.5 : 1 }}>
+              {commitLoading ? '···' : commitCount ?? '400'}
             </span>
             <span className="stat-label">Commits</span>
           </div>
           <div className="stat">
-            <span className="stat-number">80+</span>
+            <span className="stat-number" style={{ opacity: apiLoading ? 0.5 : 1 }}>
+              {apiLoading ? '···' : totalAPIs ?? '80'}
+            </span>
             <span className="stat-label">APIs Integrated</span>
           </div>
         </div>
