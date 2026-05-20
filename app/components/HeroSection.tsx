@@ -9,8 +9,7 @@ export default function HeroSection() {
         <p className="hero-eyebrow">Full-Stack Developer &amp; Creative Technologist</p>
 
         <h1 className="hero-title">
-          <span className="title-studio">Studio</span>
-          <span className="title-name">Sabin</span>
+          <span className="title-name">Mason Sabin</span>
         </h1>
 
         <p className="hero-description">

@@ -27,28 +27,15 @@
   margin-bottom: 1.2rem;
 }
 
-.hero-title {
-  margin-bottom: 1.5rem;
-  line-height: 1;
-}
-
-.title-studio {
-  display: block;
-  font-size: clamp(2rem, 5.5vw, 3.6rem);
-  font-weight: 400;
-  color: rgba(var(--accent-rgb), 0.6);
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  margin-bottom: 0.1em;
-}
+.hero-title { margin-bottom: 1.5rem; }
 
 .title-name {
   display: block;
-  font-size: clamp(4rem, 11vw, 7rem);
+  font-size: clamp(3.2rem, 9vw, 5.5rem);
   font-weight: 900;
   color: var(--accent);
   letter-spacing: -3px;
-  line-height: 0.95;
+  line-height: 1;
 }
 
 .hero-description {
@@ -183,5 +170,4 @@
   .hero-stats { gap: 1.5rem; }
   .stat-divider { display: none; }
   .stat-number { font-size: 2rem; }
-  .title-studio { font-size: clamp(1.4rem, 5vw, 2.4rem); }
 }
