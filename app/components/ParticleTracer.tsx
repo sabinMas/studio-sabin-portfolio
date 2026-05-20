@@ -24,11 +24,11 @@ interface CanvasTheme {
 }
 
 const DEFAULT_THEME: CanvasTheme = {
-  accentRgb: [212, 175, 55],
-  trailRgb: [10, 10, 10],
-  bgDeep: '#0a0a0a',
-  bgMid: '#1a1a2e',
-  isLight: false,
+  accentRgb: [28, 28, 30],
+  trailRgb: [250, 250, 250],
+  bgDeep: '#fafafa',
+  bgMid: '#f0f0f0',
+  isLight: true,
 };
 
 export default function ParticleTracer() {

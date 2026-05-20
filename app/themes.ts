@@ -333,7 +333,8 @@ export function applyTheme(theme: Theme) {
 }
 
 export function getInitialTheme(): Theme {
-  if (typeof window === 'undefined') return themes[0];
+  const chalk = themes.find((t) => t.id === 'chalk')!;
+  if (typeof window === 'undefined') return chalk;
   const saved = localStorage.getItem('portfolio-theme');
-  return themes.find((t) => t.id === saved) ?? themes[0];
+  return themes.find((t) => t.id === saved) ?? chalk;
 }
