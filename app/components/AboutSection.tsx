@@ -42,9 +42,12 @@ export default function AboutSection() {
               leadership into every technical collaboration.
             </p>
             <p>
-              Outside of work I&apos;m drawn to surrealist art — particularly Dalí&apos;s ability
-              to make the impossible feel inevitable. That sensibility shows up in my UI work:
-              precise, a little unexpected, and always intentional.
+              Outside of work I&apos;m drawn to historical literature and the outdoors — learning
+              how humans interact with and adapt to their environments, from the Pacific Northwest
+              temperate rainforests to Arctic tundra to indigenous living practices. I spend time
+              backpacking whenever possible and studying world cultures and their relationship
+              with the land. These experiences inform how I think about design: rooted in context,
+              aware of constraints, and always in conversation with the people and places it touches.
             </p>
 
             <div className="about-links">
