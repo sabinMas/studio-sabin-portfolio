@@ -1,8 +1,11 @@
 'use client';
 
+import { useCommitCount } from '@/hooks/useCommitCount';
 import './HeroSection.css';
 
 export default function HeroSection() {
+  const { count: commitCount, loading } = useCommitCount();
+
   return (
     <section className="hero" id="home">
       {/* Top-left metadata tag */}
@@ -27,7 +30,9 @@ export default function HeroSection() {
             <span className="stat-label">Projects</span>
           </div>
           <div className="stat">
-            <span className="stat-number">400+</span>
+            <span className="stat-number" style={{ opacity: loading ? 0.5 : 1 }}>
+              {loading ? '···' : commitCount ? `${commitCount}+` : '400+'}
+            </span>
             <span className="stat-label">Commits</span>
           </div>
           <div className="stat">
