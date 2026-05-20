@@ -7,10 +7,10 @@ import ProjectShowcase from '@/components/ProjectShowcase';
 import AboutSection from '@/components/AboutSection';
 import Footer from '@/components/Footer';
 import ParticleTracer from '@/components/ParticleTracer';
+import ThemeSwitcher from '@/components/ThemeSwitcher';
 import './app.css';
 
 export default function App() {
-  // Scroll-reveal: observe .reveal elements and add .visible
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -23,7 +23,6 @@ export default function App() {
       },
       { threshold: 0.12 }
     );
-
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
@@ -36,6 +35,7 @@ export default function App() {
       <ProjectShowcase />
       <AboutSection />
       <Footer />
+      <ThemeSwitcher />
     </div>
   );
 }

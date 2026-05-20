@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import type { Theme } from '@/themes';
 
 interface Particle {
   x: number;
@@ -9,19 +10,32 @@ interface Particle {
   vy: number;
   life: number;
   size: number;
-  colorIdx: number;
+  r: number;
+  g: number;
+  b: number;
 }
 
-const COLORS = [
-  [212, 175, 55],   // gold
-  [255, 215, 0],    // bright gold
-  [224, 185, 80],   // warm gold
-];
+interface CanvasTheme {
+  accentRgb: [number, number, number];
+  trailRgb: [number, number, number];
+  bgDeep: string;
+  bgMid: string;
+  isLight: boolean;
+}
+
+const DEFAULT_THEME: CanvasTheme = {
+  accentRgb: [212, 175, 55],
+  trailRgb: [10, 10, 10],
+  bgDeep: '#0a0a0a',
+  bgMid: '#1a1a2e',
+  isLight: false,
+};
 
 export default function ParticleTracer() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mouseRef = useRef({ x: -500, y: -500 });
   const particlesRef = useRef<Particle[]>([]);
+  const themeRef = useRef<CanvasTheme>(DEFAULT_THEME);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -30,10 +44,14 @@ export default function ParticleTracer() {
     if (!ctx) return;
 
     const drawBg = () => {
-      const g = ctx.createLinearGradient(0, canvas.height * 0.55, canvas.width, canvas.height);
-      g.addColorStop(0, '#0a0a0a');
-      g.addColorStop(0.55, '#1a1a2e');
-      g.addColorStop(1, '#16213e');
+      const t = themeRef.current;
+      if (t.isLight) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        return;
+      }
+      const g = ctx.createLinearGradient(0, 0, canvas.width * 0.6, canvas.height);
+      g.addColorStop(0, t.bgDeep);
+      g.addColorStop(1, t.bgMid);
       ctx.fillStyle = g;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
     };
@@ -51,16 +69,36 @@ export default function ParticleTracer() {
     };
     window.addEventListener('mousemove', onMouseMove);
 
+    const onThemeChange = (e: Event) => {
+      const theme = (e as CustomEvent<Theme>).detail;
+      themeRef.current = {
+        accentRgb: theme.accentRgb,
+        trailRgb: theme.trailRgb,
+        bgDeep: theme.bgDeep,
+        bgMid: theme.bgMid,
+        isLight: theme.isLight,
+      };
+      // Immediately repaint background on theme switch
+      drawBg();
+    };
+    window.addEventListener('theme-change', onThemeChange);
+
     let raf: number;
 
     const tick = () => {
-      // Fade-trail instead of full clear
-      ctx.fillStyle = 'rgba(10, 10, 10, 0.18)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      const t = themeRef.current;
+      const [tr, tg, tb] = t.trailRgb;
 
-      // Spawn 1-2 particles per frame
+      if (t.isLight) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      } else {
+        ctx.fillStyle = `rgba(${tr},${tg},${tb},0.15)`;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
+
+      // Spawn particles at cursor
       if (Math.random() > 0.45) {
-        const colorIdx = Math.floor(Math.random() * COLORS.length);
+        const [ar, ag, ab] = t.accentRgb;
         particlesRef.current.push({
           x: mouseRef.current.x,
           y: mouseRef.current.y,
@@ -68,30 +106,27 @@ export default function ParticleTracer() {
           vy: (Math.random() - 0.5) * 3.5 - 0.3,
           life: 1,
           size: Math.random() * 2.5 + 0.8,
-          colorIdx,
+          r: ar, g: ag, b: ab,
         });
       }
 
       particlesRef.current = particlesRef.current.filter((p) => {
         p.x += p.vx;
         p.y += p.vy;
-        p.vy += 0.04;     // gentle gravity
-        p.vx *= 0.98;     // air resistance
+        p.vy += 0.04;
+        p.vx *= 0.98;
         p.life -= 0.016;
-
-        const [r, g, b] = COLORS[p.colorIdx];
-        const a = p.life;
 
         // Core
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${r},${g},${b},${a * 0.8})`;
+        ctx.fillStyle = `rgba(${p.r},${p.g},${p.b},${p.life * 0.8})`;
         ctx.fill();
 
         // Glow halo
         const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size * 3.5);
-        grad.addColorStop(0, `rgba(${r},${g},${b},${a * 0.25})`);
-        grad.addColorStop(1, `rgba(${r},${g},${b},0)`);
+        grad.addColorStop(0, `rgba(${p.r},${p.g},${p.b},${p.life * 0.22})`);
+        grad.addColorStop(1, `rgba(${p.r},${p.g},${p.b},0)`);
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size * 3.5, 0, Math.PI * 2);
         ctx.fillStyle = grad;
@@ -109,6 +144,7 @@ export default function ParticleTracer() {
       cancelAnimationFrame(raf);
       window.removeEventListener('resize', resize);
       window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('theme-change', onThemeChange);
     };
   }, []);
 

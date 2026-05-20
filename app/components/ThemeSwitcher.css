@@ -1,0 +1,215 @@
+/* ── Floating button ───────────────────────────────────────────── */
+.ts-fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.1rem 0.6rem 0.8rem;
+  border-radius: 50px;
+  background: var(--accent);
+  color: var(--bg-deep);
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 20px rgba(var(--accent-rgb), 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ts-fab svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.ts-fab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(var(--accent-rgb), 0.55);
+}
+
+/* ── Backdrop ──────────────────────────────────────────────────── */
+.ts-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 299;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Panel ─────────────────────────────────────────────────────── */
+.ts-panel {
+  position: fixed;
+  bottom: 5.5rem;
+  right: 2rem;
+  z-index: 300;
+  width: 260px;
+  background: var(--nav-bg);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transform: translateY(12px) scale(0.97);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  overflow: hidden;
+}
+
+.ts-panel.open {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── Header ────────────────────────────────────────────────────── */
+.ts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.1rem 0.8rem;
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.1);
+}
+
+.ts-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.3px;
+}
+
+.ts-close {
+  background: none;
+  border: none;
+  color: rgba(var(--text-rgb), 0.5);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.ts-close:hover {
+  color: var(--text);
+  background: rgba(var(--accent-rgb), 0.1);
+}
+
+/* ── Body ──────────────────────────────────────────────────────── */
+.ts-body {
+  padding: 0.6rem 0.8rem;
+  max-height: 420px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--accent-rgb), 0.3) transparent;
+}
+
+.ts-group {
+  margin-bottom: 0.5rem;
+}
+
+.ts-group-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(var(--text-rgb), 0.4);
+  padding: 0.6rem 0.3rem 0.3rem;
+}
+
+.ts-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: 9px;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  text-align: left;
+}
+
+.ts-item:hover {
+  background: rgba(var(--accent-rgb), 0.07);
+  border-color: rgba(var(--accent-rgb), 0.15);
+}
+
+.ts-item.active {
+  background: rgba(var(--accent-rgb), 0.12);
+  border-color: rgba(var(--accent-rgb), 0.3);
+}
+
+/* Color swatch */
+.ts-swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(var(--text-rgb), 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s;
+}
+
+.ts-item:hover .ts-swatch,
+.ts-item.active .ts-swatch {
+  transform: scale(1.1);
+}
+
+.ts-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.ts-name {
+  flex: 1;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.ts-check {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── Footer ────────────────────────────────────────────────────── */
+.ts-footer {
+  padding: 0.6rem 1.1rem 0.8rem;
+  border-top: 1px solid rgba(var(--accent-rgb), 0.08);
+  font-size: 0.7rem;
+  color: rgba(var(--text-rgb), 0.35);
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .ts-panel {
+    right: 1rem;
+    left: 1rem;
+    width: auto;
+    bottom: 5rem;
+  }
+
+  .ts-fab {
+    right: 1rem;
+    bottom: 1.2rem;
+  }
+}

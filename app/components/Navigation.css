@@ -3,7 +3,7 @@
   top: 0;
   width: 100%;
   padding: 1.1rem 0;
-  background: rgba(10, 10, 10, 0.75);
+  background: rgba(var(--accent-rgb), 0);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
@@ -13,9 +13,9 @@
 
 .navbar.scrolled {
   padding: 0.75rem 0;
-  background: rgba(10, 10, 10, 0.92);
-  border-bottom-color: rgba(212, 175, 55, 0.18);
-  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.55);
+  background: var(--nav-bg);
+  border-bottom-color: rgba(var(--accent-rgb), 0.18);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
@@ -37,21 +37,15 @@
 .brand-text {
   font-size: 1.4rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #d4af37 0%, #ffd700 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent);
   letter-spacing: 0.5px;
 }
 
-.brand-dot {
-  color: rgba(212, 175, 55, 0.4);
-  font-size: 1.2rem;
-}
+.brand-dot { color: rgba(var(--accent-rgb), 0.4); font-size: 1.2rem; }
 
 .brand-sub {
   font-size: 0.8rem;
-  color: rgba(212, 175, 55, 0.6);
+  color: rgba(var(--accent-rgb), 0.6);
   font-style: italic;
   font-weight: 400;
 }
@@ -66,7 +60,7 @@
 }
 
 .nav-menu a {
-  color: rgba(224, 224, 224, 0.85);
+  color: rgba(var(--text-rgb), 0.85);
   font-weight: 500;
   font-size: 0.95rem;
   position: relative;
@@ -77,44 +71,35 @@
 .nav-menu a::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #d4af37, #ffd700);
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--accent);
   border-radius: 1px;
   transition: width 0.3s ease;
 }
 
-.nav-menu a:hover {
-  color: #d4af37;
-}
-
-.nav-menu a:hover::after {
-  width: 100%;
-}
+.nav-menu a:hover { color: var(--accent); }
+.nav-menu a:hover::after { width: 100%; }
 
 .nav-resume {
-  background: linear-gradient(135deg, #d4af37 0%, #ffd700 100%);
-  color: #000 !important;
+  background: var(--accent) !important;
+  color: var(--bg-deep) !important;
   padding: 0.6rem 1.4rem;
   border-radius: 50px;
   font-weight: 700;
   font-size: 0.85rem !important;
-  box-shadow: 0 3px 14px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 3px 14px rgba(var(--accent-rgb), 0.3);
   transition: transform 0.25s ease, box-shadow 0.25s ease !important;
 }
 
-.nav-resume::after {
-  display: none !important;
-}
+.nav-resume::after { display: none !important; }
 
 .nav-resume:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5) !important;
+  box-shadow: 0 6px 20px rgba(var(--accent-rgb), 0.5) !important;
+  color: var(--bg-deep) !important;
 }
 
-/* Hamburger */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -127,9 +112,8 @@
 
 .nav-toggle span {
   display: block;
-  width: 24px;
-  height: 2px;
-  background: #d4af37;
+  width: 24px; height: 2px;
+  background: var(--accent);
   border-radius: 2px;
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: center;
@@ -144,37 +128,29 @@
 
   .nav-menu {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 100%; left: 0;
     width: 100%;
     flex-direction: column;
     align-items: center;
-    background: rgba(10, 10, 10, 0.97);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    background: var(--nav-bg);
+    border-bottom: 1px solid rgba(var(--accent-rgb), 0.15);
     gap: 0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.35s ease;
   }
 
-  .nav-menu.active {
-    max-height: 320px;
-  }
+  .nav-menu.active { max-height: 320px; }
 
   .nav-menu li {
     width: 100%;
     text-align: center;
     padding: 0.9rem 0;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.06);
+    border-bottom: 1px solid rgba(var(--accent-rgb), 0.06);
   }
 
   .nav-menu li:last-child { border-bottom: none; }
-
-  .nav-resume {
-    display: inline-block;
-    margin: 0.5rem 0;
-  }
-
+  .nav-resume { display: inline-block; margin: 0.5rem 0; }
   .nav-container { padding: 0 1rem; }
   .brand-text { font-size: 1.2rem; }
 }

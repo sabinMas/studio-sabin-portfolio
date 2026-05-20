@@ -95,6 +95,7 @@ const projects: Project[] = [
     description:
       "Environmental data visualization exploring Washington State's ecosystems, wildlife, and conservation initiatives through 8 interactive maps and 1000+ data points.",
     tags: ['React', 'Data Viz', 'Conservation', 'Maps'],
+    liveLink: 'https://wild-washington.vercel.app',
     githubLink: 'https://github.com/sabinMas/Wild-Washington',
     emoji: '🌲',
     stats: [
