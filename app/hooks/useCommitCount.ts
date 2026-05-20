@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 export function useCommitCount() {
   const [count, setCount] = useState<number | null>(null);
+  const [repoCount, setRepoCount] = useState<number | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -12,6 +13,7 @@ export function useCommitCount() {
         const data = await res.json();
         if (data.commits !== null) {
           setCount(data.commits);
+          setRepoCount(data.repos);
         }
       } catch (error) {
         console.error('Error fetching commit count:', error);
@@ -24,5 +26,5 @@ export function useCommitCount() {
     fetchCommits();
   }, []);
 
-  return { count, loading };
+  return { count, repoCount, loading };
 }

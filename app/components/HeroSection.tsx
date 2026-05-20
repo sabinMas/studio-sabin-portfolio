@@ -5,7 +5,7 @@ import { useAPIStats } from '@/hooks/useAPIStats';
 import './HeroSection.css';
 
 export default function HeroSection() {
-  const { count: commitCount, loading: commitLoading } = useCommitCount();
+  const { count: commitCount, repoCount, loading: commitLoading } = useCommitCount();
   const { totalAPIs, loading: apiLoading } = useAPIStats();
 
   return (
@@ -28,7 +28,9 @@ export default function HeroSection() {
       <div className="hero-bottom">
         <div className="hero-stats">
           <div className="stat">
-            <span className="stat-number">9</span>
+            <span className="stat-number" style={{ opacity: commitLoading ? 0.5 : 1 }}>
+              {commitLoading ? '···' : repoCount ?? '9'}
+            </span>
             <span className="stat-label">Projects</span>
           </div>
           <div className="stat">
