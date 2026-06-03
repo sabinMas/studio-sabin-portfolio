@@ -40,6 +40,14 @@ export default function ParticleTracer() {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+
+    // Disable cursor animation on mobile/touch devices
+    const isMobile = window.innerWidth <= 768 || navigator.maxTouchPoints > 0;
+    if (isMobile) {
+      canvas.style.display = 'none';
+      return;
+    }
+
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
