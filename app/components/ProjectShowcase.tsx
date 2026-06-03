@@ -147,6 +147,48 @@ const projects: Project[] = [
       { label: 'Platform', value: 'Vercel' },
     ],
   },
+  {
+    id: '10',
+    title: 'Appointment Scheduler',
+    description:
+      'Collaborative Node.js application for scheduling and managing appointments. Demonstrates full-stack development with Express backend, client-side scheduling logic, and real-time availability management. Built with best practices for collaborative development.',
+    tags: ['Node.js', 'Express', 'JavaScript', 'REST API'],
+    githubLink: 'https://github.com/sabinMas/appointment_scheduler',
+    emoji: '📅',
+    stats: [
+      { label: 'Language', value: 'Node.js' },
+      { label: 'Contributors', value: '2' },
+      { label: 'Status', value: 'Active' },
+    ],
+  },
+  {
+    id: '11',
+    title: 'Project Smart Sort',
+    description:
+      'Python-based intelligent sorting and organization tool. Applies machine learning principles to organize and categorize data efficiently. Demonstrates algorithmic thinking and advanced Python programming practices.',
+    tags: ['Python', 'Algorithms', 'Data Processing', 'ML'],
+    githubLink: 'https://github.com/sabinMas/Project-Smart-Sort',
+    emoji: '🔤',
+    stats: [
+      { label: 'Language', value: 'Python' },
+      { label: 'Focus', value: 'Algorithms' },
+      { label: 'Status', value: 'Active' },
+    ],
+  },
+  {
+    id: '12',
+    title: 'RambleBot',
+    description:
+      'Natural language processing and text generation engine written in Java. Implements Markov chain text generation to learn from training data and generate contextual text. Demonstrates strong understanding of data structures, algorithms, and NLP fundamentals.',
+    tags: ['Java', 'NLP', 'Algorithms', 'Text Processing'],
+    githubLink: 'https://github.com/sabinMas/ramblebot',
+    emoji: '🤖',
+    stats: [
+      { label: 'Language', value: 'Java' },
+      { label: 'Concepts', value: 'NLP' },
+      { label: 'Type', value: 'Educational' },
+    ],
+  },
 ];
 
 export default function ProjectShowcase() {
@@ -155,7 +197,7 @@ export default function ProjectShowcase() {
       <div className="projects-container">
         <div className="section-header reveal">
           <h2 className="section-title">Featured Works</h2>
-          <span className="section-count">[009]</span>
+          <span className="section-count">[012]</span>
         </div>
 
         <div className="projects-grid">
