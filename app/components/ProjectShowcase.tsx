@@ -189,6 +189,35 @@ const projects: Project[] = [
       { label: 'Type', value: 'Educational' },
     ],
   },
+  {
+    id: '13',
+    title: 'All Things Floral by Tab',
+    description:
+      'Mobile-first wedding florist website for a Buckley, WA florist. Built with Next.js (App Router) and Tailwind CSS, featuring a self-updating photo gallery, Formspree-powered wedding inquiry and review-submission forms, and SEO-optimized service pages.',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Formspree'],
+    liveLink: 'https://allthingsfloralbytab.com',
+    githubLink: 'https://github.com/sabinMas/AllThingsFloralByTab',
+    emoji: '💐',
+    stats: [
+      { label: 'Pages', value: '5' },
+      { label: 'Commits', value: '32' },
+      { label: 'Type', value: 'Client' },
+    ],
+  },
+  {
+    id: '14',
+    title: 'Job Application Tracker',
+    description:
+      'Full-stack job-search automation platform that discovers listings, scores them with Bedrock Claude against your preferences, tailors a resume and cover letter per job, and auto-applies through a Playwright browser worker. FastAPI/SQLAlchemy backend and React/Vite frontend, deployed serverless on AWS Lambda and ECS Fargate for zero idle cost.',
+    tags: ['FastAPI', 'React', 'AWS Lambda', 'Playwright', 'AI'],
+    githubLink: 'https://github.com/sabinMas/JobApplicationTracker',
+    emoji: '🗂️',
+    stats: [
+      { label: 'Commits', value: '199' },
+      { label: 'ATS Platforms', value: '7' },
+      { label: 'Pipeline Stages', value: '5' },
+    ],
+  },
 ];
 
 export default function ProjectShowcase() {
@@ -197,7 +226,7 @@ export default function ProjectShowcase() {
       <div className="projects-container">
         <div className="section-header reveal">
           <h2 className="section-title">Featured Works</h2>
-          <span className="section-count">[012]</span>
+          <span className="section-count">[014]</span>
         </div>
 
         <div className="projects-grid">
