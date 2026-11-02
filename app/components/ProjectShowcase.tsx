@@ -76,35 +76,6 @@ const projects: Project[] = [
   },
   {
     id: '5',
-    title: 'MortalKodebat',
-    description:
-      'Full-featured ecommerce storefront built with a team of 4 as a capstone project — product catalog, cart, and checkout flow built collaboratively under a shared Git workflow and code review process.',
-    tags: ['JavaScript', 'Node.js', 'Ecommerce', 'Team Project'],
-    githubLink: 'https://github.com/sabinMas/MortalKodebat',
-    emoji: '🛒',
-    stats: [
-      { label: 'Commits', value: '95' },
-      { label: 'Contributors', value: '4' },
-      { label: 'GitHub Stars', value: '3' },
-    ],
-  },
-  {
-    id: '6',
-    title: 'SMM — Social Media Manager',
-    description:
-      'Full-stack social media management platform built as a shared/backend/frontend/infra monorepo, with Docker Compose for local development, automated testing via Vitest, and a Render-based deployment pipeline.',
-    tags: ['TypeScript', 'Node.js', 'Docker', 'Monorepo'],
-    liveLink: 'https://project-smm-jet.vercel.app',
-    githubLink: 'https://github.com/sabinMas/project-smm',
-    emoji: '📱',
-    stats: [
-      { label: 'Workspaces', value: '4' },
-      { label: 'Commits', value: '29' },
-      { label: 'Deploy', value: 'Docker' },
-    ],
-  },
-  {
-    id: '7',
     title: "Paunchy's List",
     description:
       'Universal developer tool finder featuring 219+ extensions across 12 environments — VS Code, JetBrains, Unreal Engine, browsers, and AI agents — with filtering by dev type, category, and environment.',
@@ -119,79 +90,7 @@ const projects: Project[] = [
     ],
   },
   {
-    id: '8',
-    title: 'PR-TRAINER',
-    description:
-      'Mobile-first sprint tracking app for athletes to log training sessions, compare personal records across event types, and analyze performance trends. Serverless Node.js backend with Vercel Postgres and username/password auth.',
-    tags: ['Node.js', 'Vercel', 'SQL', 'Vanilla JS'],
-    liveLink: 'https://pr-trainer.vercel.app',
-    githubLink: 'https://github.com/sabinMas/PR-TRAINER',
-    emoji: '🏃',
-    stats: [
-      { label: 'Commits', value: '18' },
-      { label: 'Database', value: 'Postgres' },
-      { label: 'Platform', value: 'Vercel' },
-    ],
-  },
-  {
-    id: '9',
-    title: 'Project Smart Sort',
-    description:
-      'Python-based intelligent sorting and organization tool built with a team of 4. Applies algorithmic sorting and categorization principles to organize data efficiently.',
-    tags: ['Python', 'Algorithms', 'Data Processing', 'Team Project'],
-    githubLink: 'https://github.com/sabinMas/Project-Smart-Sort',
-    emoji: '🔤',
-    stats: [
-      { label: 'Commits', value: '51' },
-      { label: 'Contributors', value: '4' },
-      { label: 'Language', value: 'Python' },
-    ],
-  },
-  {
-    id: '10',
-    title: 'Wild Washington',
-    description:
-      "Environmental data visualization exploring Washington State's ecosystems, wildlife, and conservation initiatives through 8 interactive maps and 1000+ data points.",
-    tags: ['React', 'Data Viz', 'Conservation', 'Maps'],
-    liveLink: 'https://wild-washington.vercel.app',
-    githubLink: 'https://github.com/sabinMas/Wild-Washington',
-    emoji: '🌲',
-    stats: [
-      { label: 'Focus Areas', value: '5+' },
-      { label: 'Interactive Maps', value: '8' },
-      { label: 'Data Points', value: '1000+' },
-    ],
-  },
-  {
-    id: '11',
-    title: 'CloudForge',
-    description:
-      'Full-stack cloud file and image hosting platform with user authentication, session management, and a MySQL-backed profile dashboard. Built with Express 5, multer for file uploads, and deployed on a VM with protected routes.',
-    tags: ['Node.js', 'Express', 'MySQL', 'EJS'],
-    githubLink: 'https://github.com/sabinMas/CloudForge',
-    emoji: '☁️',
-    stats: [
-      { label: 'Commits', value: '88' },
-      { label: 'Contributors', value: '3' },
-      { label: 'Auth System', value: 'Session' },
-    ],
-  },
-  {
-    id: '12',
-    title: 'Buffet-bot',
-    description:
-      'Terminal-based AI trading assistant using local LLMs via Ollama, live market data, and Alpaca paper trading. Applies Buffett-style fundamental analysis through a 21-command CLI.',
-    tags: ['Python', 'Ollama', 'Alpaca API', 'CLI'],
-    githubLink: 'https://github.com/sabinMas/buffet-bot',
-    emoji: '📈',
-    stats: [
-      { label: 'Commands', value: '21' },
-      { label: 'LLM Models', value: '2' },
-      { label: 'Commits', value: '60' },
-    ],
-  },
-  {
-    id: '13',
+    id: '6',
     title: 'Puget Salmon Health',
     description:
       'Interactive dashboard visualizing Chinook salmon population health across Puget Sound watersheds with real-time data integration from multiple environmental agencies.',
@@ -206,36 +105,7 @@ const projects: Project[] = [
     ],
   },
   {
-    id: '14',
-    title: 'Microjam GBA',
-    description:
-      'Game Boy Advance microgame collection built by the Green River College cohort — WarioWare-style gameplay themed around space and UFOs. 25+ contributors, 1100+ commits.',
-    tags: ['C++', 'Butano', 'Game Dev', 'GBA'],
-    liveLink: 'https://grc-cohort-23.github.io/microjam/',
-    githubLink: 'https://github.com/grc-cohort-23/microjam',
-    emoji: '🎮',
-    stats: [
-      { label: 'Microgames', value: '12+' },
-      { label: 'Team Size', value: '25+' },
-      { label: 'Commits', value: '1100+' },
-    ],
-  },
-  {
-    id: '15',
-    title: 'RambleBot',
-    description:
-      'Natural language processing and text generation engine written in Java. Implements Markov chain text generation to learn from training data and generate contextual text. Demonstrates strong understanding of data structures, algorithms, and NLP fundamentals.',
-    tags: ['Java', 'NLP', 'Algorithms', 'Text Processing'],
-    githubLink: 'https://github.com/sabinMas/ramblebot',
-    emoji: '🤖',
-    stats: [
-      { label: 'Commits', value: '38' },
-      { label: 'Contributors', value: '2' },
-      { label: 'Concepts', value: 'NLP' },
-    ],
-  },
-  {
-    id: '16',
+    id: '7',
     title: 'PDGA Tournament Director Marketplace',
     description:
       'Full-featured e-commerce storefront for disc golf tournament directors to order event supplies. Features email token authentication, an interactive Leaflet.js map-based store locator via Overpass/Nominatim APIs, and a dynamic cart with tiered product recommendations.',
@@ -249,17 +119,17 @@ const projects: Project[] = [
     ],
   },
   {
-    id: '17',
-    title: 'Appointment Scheduler',
+    id: '8',
+    title: 'CloudForge',
     description:
-      'Collaborative Node.js application for scheduling and managing appointments. Demonstrates full-stack development with Express backend, client-side scheduling logic, and real-time availability management.',
-    tags: ['Node.js', 'Express', 'JavaScript', 'REST API'],
-    githubLink: 'https://github.com/sabinMas/appointment_scheduler',
-    emoji: '📅',
+      'Full-stack cloud file and image hosting platform with user authentication, session management, and a MySQL-backed profile dashboard. Built with Express 5, multer for file uploads, and deployed on a VM with protected routes.',
+    tags: ['Node.js', 'Express', 'MySQL', 'EJS'],
+    githubLink: 'https://github.com/sabinMas/CloudForge',
+    emoji: '☁️',
     stats: [
-      { label: 'Commits', value: '8' },
-      { label: 'Contributors', value: '2' },
-      { label: 'Language', value: 'Node.js' },
+      { label: 'Commits', value: '88' },
+      { label: 'Contributors', value: '3' },
+      { label: 'Auth System', value: 'Session' },
     ],
   },
 ];
@@ -270,7 +140,7 @@ export default function ProjectShowcase() {
       <div className="projects-container">
         <div className="section-header reveal">
           <h2 className="section-title">Featured Works</h2>
-          <span className="section-count">[017]</span>
+          <span className="section-count">[008]</span>
         </div>
 
         <div className="projects-grid">
@@ -287,7 +157,7 @@ export default function ProjectShowcase() {
 
         <div className="projects-footer reveal">
           <p>
-            Explore more on{' '}
+            These are the highlights — more projects, coursework, and experiments on{' '}
             <a href="https://github.com/sabinMas" target="_blank" rel="noopener noreferrer">
               GitHub →
             </a>

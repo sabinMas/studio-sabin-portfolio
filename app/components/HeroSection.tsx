@@ -29,7 +29,7 @@ export default function HeroSection() {
             <span className="stat-number" style={{ opacity: commitLoading ? 0.5 : 1 }}>
               {commitLoading ? '···' : repoCount ?? '9'}
             </span>
-            <span className="stat-label">Projects</span>
+            <span className="stat-label">GitHub Repos</span>
           </div>
           <div className="stat">
             <span className="stat-number" style={{ opacity: commitLoading ? 0.5 : 1 }}>

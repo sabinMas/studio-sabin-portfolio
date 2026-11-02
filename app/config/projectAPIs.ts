@@ -7,6 +7,27 @@ export interface ProjectAPI {
 export const projectAPIs: ProjectAPI[] = [
   {
     projectId: '1',
+    projectName: 'Job Application Tracker',
+    apis: [
+      'AWS Bedrock Claude API',
+    ],
+  },
+  {
+    projectId: '2',
+    projectName: 'All Things Floral by Tab',
+    apis: [
+      'Formspree API',
+    ],
+  },
+  {
+    projectId: '3',
+    projectName: 'Kalshi Research Assistant',
+    apis: [
+      'Kalshi API',
+    ],
+  },
+  {
+    projectId: '4',
     projectName: 'GeoSight',
     apis: [
       'USGS API',
@@ -29,40 +50,17 @@ export const projectAPIs: ProjectAPI[] = [
     ],
   },
   {
-    projectId: '2',
+    projectId: '5',
     projectName: "Paunchy's List",
     apis: [], // Curated database, no external APIs
   },
   {
-    projectId: '3',
-    projectName: 'Buffet-bot',
-    apis: [
-      'Alpaca Trading API',
-      'Alpha Vantage API',
-      'IEX Cloud API',
-    ],
-  },
-  {
-    projectId: '4',
+    projectId: '6',
     projectName: 'Puget Salmon Health',
     apis: [
       'NOAA Fisheries API',
       'Washington State Department of Ecology API',
       'USGS Water Resources API',
-    ],
-  },
-  {
-    projectId: '5',
-    projectName: 'Microjam GBA',
-    apis: [], // Game development, no external APIs
-  },
-  {
-    projectId: '6',
-    projectName: 'Wild Washington',
-    apis: [
-      'Washington State GIS API',
-      'USGS Biodiversity API',
-      'iNaturalist API',
     ],
   },
   {
@@ -79,30 +77,6 @@ export const projectAPIs: ProjectAPI[] = [
     projectId: '8',
     projectName: 'CloudForge',
     apis: [], // Self-contained file hosting
-  },
-  {
-    projectId: '9',
-    projectName: 'PR-TRAINER',
-    apis: [
-      'Vercel Postgres API',
-    ],
-  },
-  {
-    projectId: '10',
-    projectName: 'Kalshi Research Assistant',
-    apis: [
-      'Kalshi API',
-    ],
-  },
-  {
-    projectId: '11',
-    projectName: 'SMM — Social Media Manager',
-    apis: [], // Internal platform APIs only
-  },
-  {
-    projectId: '12',
-    projectName: 'MortalKodebat',
-    apis: [], // Self-contained ecommerce catalog
   },
 ];
 

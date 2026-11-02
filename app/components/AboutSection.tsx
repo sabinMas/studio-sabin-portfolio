@@ -28,22 +28,12 @@ export default function AboutSection() {
               intelligence, applied AI, and thoughtful engineering.
             </p>
             <p>
-              I&apos;m currently a <strong>Power Platform Intern</strong> at Affirma, where
-              I&apos;ve built 10 event-driven Power Automate flows across 9 Dataverse tables
-              for Seattle Public Utilities&apos; hiring process and am now building the canvas
-              app for their temporary-hire workflow. I&apos;m also the <strong>project manager
-              for a 9-person team</strong> at Green River College migrating 3 legacy PHP
-              applications to Node.js — writing the documentation, schema, and architecture
-              plan, and shipping 4 new REST APIs to replace the legacy endpoints.
-            </p>
-            <p>
-              Alongside those roles, I spent 10 months as an <strong>AI Training Fellow at
-              Handshake AI</strong>, training and evaluating large language models across
-              computer vision, speech analysis, and Java coding projects, and auditing
-              hundreds of dataset entries weekly against detailed quality guidelines. I also
-              built and maintain <strong>GeoSight</strong> — a full-stack platform that
-              aggregates 80+ government and open-data APIs into real-time geospatial
-              analytics for any place on earth.
+              Right now I split my time between a <strong>Power Platform internship at
+              Affirma</strong> and a <strong>project management role at Green River
+              College</strong> (see <a href="#experience">Experience</a> for specifics), while
+              building and maintaining <strong>GeoSight</strong> on the side — a full-stack
+              platform that aggregates 80+ government and open-data APIs into real-time
+              geospatial analytics for any place on earth.
             </p>
             <p>
               Before code, I spent two years as a <strong>Zone Leader in Rome, Italy</strong>,

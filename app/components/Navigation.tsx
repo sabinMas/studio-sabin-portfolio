@@ -33,8 +33,9 @@ export default function Navigation() {
         </button>
 
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`} role="list">
-          <li><a href="#home"     onClick={close}>Index</a></li>
-          <li><a href="#projects" onClick={close}>Projects</a></li>
+          <li><a href="#home"       onClick={close}>Index</a></li>
+          <li><a href="#experience" onClick={close}>Experience</a></li>
+          <li><a href="#projects"   onClick={close}>Projects</a></li>
           <li><a href="#about"    onClick={close}>About</a></li>
           <li><a href="/resume.pdf" download onClick={close}>Resume</a></li>
           <li>
