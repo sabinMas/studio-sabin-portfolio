@@ -6,7 +6,7 @@ const skills = [
   { category: 'Frontend', items: ['React / Next.js', 'TypeScript', 'Vite', 'CSS'] },
   { category: 'Backend', items: ['Node.js / Express', 'Python', 'SQLite / MySQL', 'REST APIs'] },
   { category: 'Geospatial & AI', items: ['CesiumJS', 'MapLibre GL', 'ESRI ArcGIS', 'Ollama / LLMs'] },
-  { category: 'Tooling', items: ['Git / GitHub', 'Vercel', 'C++ / Butano (GBA)', 'PHP'] },
+  { category: 'Platform & Tooling', items: ['Power Automate / Dataverse', 'Git / GitHub', 'Vercel', 'PHP'] },
 ];
 
 export default function AboutSection() {
@@ -28,11 +28,22 @@ export default function AboutSection() {
               intelligence, applied AI, and thoughtful engineering.
             </p>
             <p>
-              I&apos;m currently building <strong>GeoSight</strong> — a full-stack platform
-              that aggregates 80+ government and open-data APIs into real-time geospatial
-              analytics for any place on earth. Alongside that, I intern as a full-stack
-              web developer at Green River College, collaborating cross-functionally with
-              administration and a team of 7 to deliver technical solutions.
+              I&apos;m currently a <strong>Power Platform Intern</strong> at Affirma, where
+              I&apos;ve built 10 event-driven Power Automate flows across 9 Dataverse tables
+              for Seattle Public Utilities&apos; hiring process and am now building the canvas
+              app for their temporary-hire workflow. I&apos;m also the <strong>project manager
+              for a 9-person team</strong> at Green River College migrating 3 legacy PHP
+              applications to Node.js — writing the documentation, schema, and architecture
+              plan, and shipping 4 new REST APIs to replace the legacy endpoints.
+            </p>
+            <p>
+              Alongside those roles, I spent 10 months as an <strong>AI Training Fellow at
+              Handshake AI</strong>, training and evaluating large language models across
+              computer vision, speech analysis, and Java coding projects, and auditing
+              hundreds of dataset entries weekly against detailed quality guidelines. I also
+              built and maintain <strong>GeoSight</strong> — a full-stack platform that
+              aggregates 80+ government and open-data APIs into real-time geospatial
+              analytics for any place on earth.
             </p>
             <p>
               Before code, I spent two years as a <strong>Zone Leader in Rome, Italy</strong>,

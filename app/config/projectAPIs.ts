@@ -87,6 +87,23 @@ export const projectAPIs: ProjectAPI[] = [
       'Vercel Postgres API',
     ],
   },
+  {
+    projectId: '10',
+    projectName: 'Kalshi Research Assistant',
+    apis: [
+      'Kalshi API',
+    ],
+  },
+  {
+    projectId: '11',
+    projectName: 'SMM — Social Media Manager',
+    apis: [], // Internal platform APIs only
+  },
+  {
+    projectId: '12',
+    projectName: 'MortalKodebat',
+    apis: [], // Self-contained ecommerce catalog
+  },
 ];
 
 export function getTotalAPICount(): number {
