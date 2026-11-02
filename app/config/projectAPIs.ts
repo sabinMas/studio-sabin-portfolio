@@ -21,10 +21,8 @@ export const projectAPIs: ProjectAPI[] = [
   },
   {
     projectId: '3',
-    projectName: 'Kalshi Research Assistant',
-    apis: [
-      'Kalshi API',
-    ],
+    projectName: 'Centroid Finder',
+    apis: [], // Self-contained image-processing pipeline, no external APIs
   },
   {
     projectId: '4',

@@ -46,17 +46,16 @@ const projects: Project[] = [
   },
   {
     id: '3',
-    title: 'Kalshi Research Assistant',
+    title: 'Centroid Finder',
     description:
-      'Prediction-market research dashboard powered by the Kalshi API: a composite-scored market scanner, live orderbook depth and EV calculator, multi-leg "Combo Lab" with correlation risk warnings, watchlists, price/volume alerts, and an AI research assistant grounded in live market data.',
-    tags: ['Next.js', 'TypeScript', 'Prisma', 'Kalshi API', 'AI'],
-    liveLink: 'https://precog-betting.vercel.app',
-    githubLink: 'https://github.com/sabinMas/precog-betting',
-    emoji: '🔮',
+      'Computer vision pipeline that locates a target-colored object in an image: Euclidean color-distance thresholding binarizes the frame, a DFS-based connected-component algorithm groups matching pixels, and the largest group\'s centroid and bounding box are plotted back onto the source image. Built in Java with a partner — actively in development.',
+    tags: ['Java', 'Computer Vision', 'DFS', 'Image Processing'],
+    githubLink: 'https://github.com/Onjamm/centroid-finder',
+    emoji: '🎯',
     stats: [
-      { label: 'Core Modules', value: '6' },
-      { label: 'Alert Types', value: '4' },
-      { label: 'AI Assistant', value: 'Yes' },
+      { label: 'Commits', value: '49' },
+      { label: 'Contributors', value: '2' },
+      { label: 'Language', value: 'Java' },
     ],
   },
   {
