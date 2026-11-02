@@ -91,6 +91,21 @@ const projects: Project[] = [
   },
   {
     id: '6',
+    title: 'Wild Washington',
+    description:
+      "Environmental data visualization exploring Washington State's ecosystems, wildlife, and conservation initiatives through 8 interactive maps and 1000+ data points.",
+    tags: ['React', 'Data Viz', 'Conservation', 'Maps'],
+    liveLink: 'https://wild-washington.vercel.app/explore',
+    githubLink: 'https://github.com/sabinMas/Wild-Washington',
+    emoji: '🌲',
+    stats: [
+      { label: 'Focus Areas', value: '5+' },
+      { label: 'Interactive Maps', value: '8' },
+      { label: 'Data Points', value: '1000+' },
+    ],
+  },
+  {
+    id: '7',
     title: 'Puget Salmon Health',
     description:
       'Interactive dashboard visualizing Chinook salmon population health across Puget Sound watersheds with real-time data integration from multiple environmental agencies.',
@@ -105,7 +120,7 @@ const projects: Project[] = [
     ],
   },
   {
-    id: '7',
+    id: '8',
     title: 'PDGA Tournament Director Marketplace',
     description:
       'Full-featured e-commerce storefront for disc golf tournament directors to order event supplies. Features email token authentication, an interactive Leaflet.js map-based store locator via Overpass/Nominatim APIs, and a dynamic cart with tiered product recommendations.',
@@ -119,7 +134,7 @@ const projects: Project[] = [
     ],
   },
   {
-    id: '8',
+    id: '9',
     title: 'CloudForge',
     description:
       'Full-stack cloud file and image hosting platform with user authentication, session management, and a MySQL-backed profile dashboard. Built with Express 5, multer for file uploads, and deployed on a VM with protected routes.',
@@ -140,7 +155,7 @@ export default function ProjectShowcase() {
       <div className="projects-container">
         <div className="section-header reveal">
           <h2 className="section-title">Featured Works</h2>
-          <span className="section-count">[008]</span>
+          <span className="section-count">[009]</span>
         </div>
 
         <div className="projects-grid">
