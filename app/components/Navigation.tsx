@@ -37,7 +37,7 @@ export default function Navigation() {
           <li><a href="#experience" onClick={close}>Experience</a></li>
           <li><a href="#projects"   onClick={close}>Projects</a></li>
           <li><a href="#about"    onClick={close}>About</a></li>
-          <li><a href="/resume.pdf" download onClick={close}>Resume</a></li>
+          <li><a href="#resume" onClick={close}>Resume</a></li>
           <li>
             <a href="mailto:masonsabin@gmail.com" className="nav-cta" onClick={close}>
               Let&apos;s Talk

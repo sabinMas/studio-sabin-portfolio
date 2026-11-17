@@ -6,6 +6,7 @@ import HeroSection from '@/components/HeroSection';
 import ExperienceSection from '@/components/ExperienceSection';
 import ProjectShowcase from '@/components/ProjectShowcase';
 import AboutSection from '@/components/AboutSection';
+import ResumeSection from '@/components/ResumeSection';
 import Footer from '@/components/Footer';
 import ParticleTracer from '@/components/ParticleTracer';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
@@ -55,6 +56,7 @@ export default function App() {
       <ExperienceSection />
       <ProjectShowcase />
       <AboutSection />
+      <ResumeSection />
       <Footer />
       <ThemeSwitcher />
     </div>
